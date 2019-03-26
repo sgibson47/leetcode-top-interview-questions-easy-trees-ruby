@@ -4,7 +4,7 @@ require '/Users/samanthagibson/Development/code/leetcode-top-interview-questions
 
 describe "#make_tree" do 
   describe "creates a tree from an array" do
-    array = [3,9,20,null,null,15,7]
+    array = [3,9,20, nil, nil,15,7]
     root = make_tree(array)
     
     it "returns the first node in the list" do 
