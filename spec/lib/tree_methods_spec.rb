@@ -14,6 +14,10 @@ describe "#make_tree" do
     it "first node points to the correct left & right nodes" do 
       expect(root.left.val).to eq(9)
       expect(root.right.val).to eq(20)
+      expect(root.right.right).to eq(nil)
+      expect(root.right.left).to eq(nil)
+      expect(root.left.right).to eq(15)
+      expect(root.left.left).to eq(7)
     end
   end
 end
