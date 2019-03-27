@@ -1,40 +1,21 @@
 require 'tree_node_class.rb'
 require 'pry'
 
-def make_tree(array)
-  #should return the root of the newly created tree
-  # create a TreeNode of array element
-  # store same in a hash at a key of index+1
-  # iterate through hash assigning children to nodes
-  # if parent is at n, left = 2n & right = 2n+1
-  
-  # It's this guy!
+def make_tree(array) 
   nodes = Hash.new
-  # in my mind this created an empty hash
-  # but it does more!
-  # it causes non-existant keys to return 0 instead of nil
 
   array.each_with_index do |val, i|
     node = TreeNode.new(val) if val
     nodes[i+1] = node
   end
-  puts "#{nodes}"
-  binding.pry
-  # called nodes[8]
-  # => 0
-  # the hash at non-existant keys is returning 0
+
   nodes.each do |n, node|
     if node
-      puts "#{node.val}"
-      # these guys are giving the 15 & 7 left & rights of 0
-
       if !!nodes[2*n]
         node.left = nodes[2*n]
-        puts "left: #{node.left.val}"
       end
       if !!nodes[2*n +1]
         node.right = nodes[2*n+1]
-        puts "right: #{node.right.val}"
       end
     end
   end
