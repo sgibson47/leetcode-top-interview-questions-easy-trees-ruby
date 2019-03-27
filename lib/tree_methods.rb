@@ -24,7 +24,7 @@ def make_tree(array)
   # => 0
   # the hash at non-existant keys is returning 0
   nodes.each do |n, node|
-    if node.val
+    if node
       puts "#{node.val}"
       # these guys are giving the 15 & 7 left & rights of 0
 
