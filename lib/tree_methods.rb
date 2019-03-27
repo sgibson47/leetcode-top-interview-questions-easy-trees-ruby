@@ -1,4 +1,5 @@
 require 'tree_node_class.rb'
+require 'pry'
 
 def make_tree(array)
   #should return the root of the newly created tree
@@ -13,12 +14,15 @@ def make_tree(array)
   end
 
   nodes.each do |n, node|
-    if node
+    if node.val
+      puts "#{node.val}"
       if nodes[2*n]
         node.left = nodes[2*n]
+        puts "left: #{node.left.val}"
       end
       if nodes[2*n +1]
         node.right = nodes[2*n+1]
+        puts "right: #{node.right.val}"
       end
     end
   end
