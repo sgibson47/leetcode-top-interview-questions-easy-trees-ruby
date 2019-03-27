@@ -16,8 +16,8 @@ describe "#make_tree" do
       expect(root.right.val).to eq(20)
       expect(root.left.right).to eq(nil)
       expect(root.left.left).to eq(nil)
-      expect(root.right.right.val).to eq(15)
-      expect(root.right.left.val).to eq(7)
+      expect(root.right.right.val).to eq(7)
+      expect(root.right.left.val).to eq(15)
     end
   end
 end
