@@ -7,7 +7,13 @@ def make_tree(array)
   # store same in a hash at a key of index+1
   # iterate through hash assigning children to nodes
   # if parent is at n, left = 2n & right = 2n+1
+  
+  # It's this guy!
   nodes = Hash.new(0)
+  # in my mind this created an empty hash
+  # but it does more!
+  # it causes non-existant keys to return 0 instead of nil
+
   array.each_with_index do |val, i|
     node = TreeNode.new(val)
     nodes[i+1] = node
