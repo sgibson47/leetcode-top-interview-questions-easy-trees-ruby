@@ -9,7 +9,7 @@ def make_tree(array)
   # if parent is at n, left = 2n & right = 2n+1
   
   # It's this guy!
-  nodes = Hash.new(0)
+  nodes = Hash.new
   # in my mind this created an empty hash
   # but it does more!
   # it causes non-existant keys to return 0 instead of nil
