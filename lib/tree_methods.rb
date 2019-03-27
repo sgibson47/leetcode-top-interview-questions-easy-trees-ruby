@@ -12,15 +12,21 @@ def make_tree(array)
     node = TreeNode.new(val)
     nodes[i+1] = node
   end
-
+  puts "#{nodes}"
+  binding.pry
+  # called nodes[8]
+  # => 0
+  # the hash at non-existant keys is returning 0
   nodes.each do |n, node|
     if node.val
       puts "#{node.val}"
-      if nodes[2*n]
+      # these guys are giving the 15 & 7 left & rights of 0
+
+      if !!nodes[2*n]
         node.left = nodes[2*n]
         puts "left: #{node.left.val}"
       end
-      if nodes[2*n +1]
+      if !!nodes[2*n +1]
         node.right = nodes[2*n+1]
         puts "right: #{node.right.val}"
       end
