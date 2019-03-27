@@ -17,3 +17,14 @@ describe "#make_tree" do
     end
   end
 end
+
+describe "#max_depth" do 
+  describe "find the max depth of the tree" do
+    array = [3,9,20, nil, nil,15,7]
+    root = make_tree(array)
+
+    it "returns an integer representing the maximum depth of the tree" do 
+      expect(max_depth(root)).to eq(3)
+    end
+  end
+end
