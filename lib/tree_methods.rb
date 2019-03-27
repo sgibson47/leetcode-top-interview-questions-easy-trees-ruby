@@ -15,7 +15,7 @@ def make_tree(array)
   # it causes non-existant keys to return 0 instead of nil
 
   array.each_with_index do |val, i|
-    node = TreeNode.new(val)
+    node = TreeNode.new(val) if val
     nodes[i+1] = node
   end
   puts "#{nodes}"
