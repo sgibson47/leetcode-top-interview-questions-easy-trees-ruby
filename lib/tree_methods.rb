@@ -26,3 +26,12 @@ end
 def max_depth(root)
   root ? 1 + [max_depth(root.left), max_depth(root.right)].max : 0
 end
+
+def is_valid_bst(root, min = -Float::INFINITY, max = Float::INFINITY)
+    return true unless root
+    if root.val <= min || root.val >= max
+      return false
+    else
+      is_valid_bst(root.left, min, root.val) && is_valid_bst(root.right, root.val, max)
+    end
+end
