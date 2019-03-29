@@ -32,3 +32,23 @@ describe "#max_depth" do
     end
   end
 end
+
+describe "#is_valid_bst" do 
+  describe "Example 1" do
+    array = [2,1,3]
+    root = make_tree(array)
+
+    it "returns true if tree is a valid BST" do 
+      expect(is_valid_bst(root)).to eq(true)
+    end
+  end
+
+  describe "Example 2" do
+    array = [5,1,4,nil,nil,3,6]
+    root = make_tree(array)
+
+    it "returns true if tree is a valid BST" do 
+      expect(is_valid_bst(root)).to eq(false)
+    end
+  end
+end
